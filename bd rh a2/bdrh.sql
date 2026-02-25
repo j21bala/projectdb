@@ -1,8 +1,3 @@
-/* Creación de la Base de Datos Relacional Recursos Humanos*/
-CREATE DATABASE bdrh;
-
-/* Comando para usar la Base de Datos Relacional Recursos Humanos*/
-USE bdrh;
 
 /* Crear la tabla regiones*/
 CREATE TABLE regiones (
