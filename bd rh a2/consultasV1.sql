@@ -92,16 +92,24 @@ SHOW INDEX FROM departamentos;
    1 EVENTO
 ===================================================== */
 
-/* Escenario: aumentar 3% a salarios menores de 4000 cada día */
+/* Escenario: aumentar 3% a salarios menores de 4000 cada minuto */
 CREATE EVENT evento_aumento_bajo_salario
-ON SCHEDULE EVERY 1 DAY
+ON SCHEDULE EVERY 1 MINUTE
 DO
 UPDATE empleados
 SET salario = salario * 1.03
 WHERE salario < 4000;
 
+
+
+
 /* Ver eventos */
 SHOW EVENTS;
+
+
+SELECT empleado_id, nombres, salario
+FROM empleados
+WHERE salario < 4000;
 
 
 
